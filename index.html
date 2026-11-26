@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de temperatura</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="contenedor">
+        <header class="encabezado">
+            <h1>Conversor de temperatura</h1>
+            <p>Convierte una temperatura entre diferentes unidades.</p>
+        </header>
+
+        <form id="formulario">
+            <div class="grupo-campo">
+                <label for="temperatura">Temperatura</label>
+                <input
+                    type="number"
+                    id="temperatura"
+                    placeholder="Ejemplo: 25"
+                    step="any"
+                    inputmode="decimal"
+                >
+            </div>
+
+            <div class="fila-unidades">
+                <div class="grupo-campo">
+                    <label for="unidadOrigen">De</label>
+                    <select id="unidadOrigen">
+                        <option value="">Elige una unidad</option>
+                        <option value="celsius">Celsius (°C)</option>
+                        <option value="fahrenheit">Fahrenheit (°F)</option>
+                        <option value="kelvin">Kelvin (K)</option>
+                    </select>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="unidadDestino">A</label>
+                    <select id="unidadDestino">
+                        <option value="">Elige una unidad</option>
+                        <option value="celsius">Celsius (°C)</option>
+                        <option value="fahrenheit">Fahrenheit (°F)</option>
+                        <option value="kelvin">Kelvin (K)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" id="btnConvertir" disabled>Convertir</button>
+        </form>
+
+        <div id="resultado" class="resultado" role="status" aria-live="polite">
+            El resultado aparecerá aquí.
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
